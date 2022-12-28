@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+</head>
+<body>
+
+
+    <h1><%=kindOfDay%></h1>
+
+    <ul>
+        <li>Buy Food</li>
+        <li>Cook Food</li>
+        <li>Eat Food</li>
+        <%for(let i = 0; i < newListItem.length; i++){%>
+            <li><%=newListItem[i]%></li>
+        <%}%>
+        
+    </ul>
+    <form action="/" method="post">
+        <input type="text" name="newItem" placeholder="Enter Task">
+        <button type="submit" name="button">Add</button>
+    </form>
+    <!-- <%if(kindOfDay === "sunday" || kindOfDay === "Saturday" ){%>
+        <h1 style="color: red;">It's a <%=kindOfDay%>!</h1>
+    <%}else{%>
+        <h1 style="color: green;">It's a <%=kindOfDay%>!</h1>
+    <%}%> -->
+</body>
+</html>
