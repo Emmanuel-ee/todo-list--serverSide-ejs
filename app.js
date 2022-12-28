@@ -6,8 +6,9 @@ let newTask;
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
-let tasks = []
+let tasks = ["Buy Food", "Cook Food", "Eat Food"];
 
 app.get("/", function (req, res) {
   let today = new Date();
@@ -24,7 +25,7 @@ app.get("/", function (req, res) {
 
 app.post("/", function (req, res) {
   let task = req.body.newItem;
-  tasks.push(task)
+  tasks.push(task);
   console.log(newTask);
   res.redirect("/");
 });
