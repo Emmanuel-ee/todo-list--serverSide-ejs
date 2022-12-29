@@ -7,7 +7,6 @@ app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-
 let tasks = ["Buy Food", "Cook Food", "Eat Food"];
 
 app.get("/", function (req, res) {
