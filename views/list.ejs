@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <title>To Do List</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="Box" id="heading">
+    <div class="box" id="heading">
       <h1><%=kindOfDay%></h1>
     </div>
 
-    <div class="Box">
+    <div class="box">
       <%for(let i = 0; i < newListItem.length; i++){%>
       <div class="item">
         <input type="checkbox" />
@@ -19,7 +19,12 @@
       <%}%>
 
       <form class="item" action="/" method="post">
-        <input type="text" name="newItem" placeholder="Enter Task" autocomplete="off" />
+        <input
+          type="text"
+          name="newItem"
+          placeholder="New Item"
+          autocomplete="off"
+        />
         <button type="submit" name="button">+</button>
       </form>
     </div>
